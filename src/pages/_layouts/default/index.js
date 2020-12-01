@@ -1,12 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { Wrapper } from "./styles";
 
-export default function DefaultLayout({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+class DefaultIndex extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: this.props.propTypes.element.name.isRequired
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>Hello this is {this.state.name} page</h1>
+      </div>
+    );
+  }
 }
-
-DefaultLayout.propTypes = {
-  children: PropTypes.element.isRequired
-};
+export default DefaultIndex;

@@ -1,5 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default function SignIn() {
-  return <h1>Sign In</h1>;
+class SignIn extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "SignIn"
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>Hello this is {this.state.name} page</h1>
+      </div>
+    );
+  }
 }
+export default SignIn;
